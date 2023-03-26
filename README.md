@@ -4,6 +4,8 @@ This is test assignment for InterPrice Technologies
 
 ### Online Demo
 
+https://test-interprice-technologies.vercel.app/
+
 ### Project Setup
 
 ```sh

@@ -1,0 +1,12 @@
+@import "./base.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  max-width: 945px;
+  width: 100%;
+  margin: 64px auto 0;
+  padding: 10px 30px;
+}

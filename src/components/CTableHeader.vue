@@ -44,7 +44,7 @@ import CTableHeaderSortIcon from "@/components/CTableHeaderSortIcon.vue";
         {{ year }} YRS
       </th>
     </tr>
-    <tr>
+    <tr v-if="years.length > 0>
       <template v-for="year in years">
         <th
           :key="`${year}_fix`"

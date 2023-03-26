@@ -99,13 +99,6 @@ export default {
       });
     });
 
-    const displayOptions = ["Spread", "Yield", "3MLSpread"];
-    const sortedDisplayOptions = [...displayOptions].sort((a, b) => {
-      if (a === this.display) return -1;
-      if (b === this.display) return 1;
-      return 0;
-    });
-
     return {
       currency: "USD",
       currencyYears: currencyYears,
@@ -116,8 +109,7 @@ export default {
       },
       years: [...(currencyYears?.USD || [])],
       display: "Spread",
-      sortedDisplayOptions: sortedDisplayOptions,
-      displayOptions: displayOptions,
+      displayOptions: ["Spread", "Yield", "3MLSpread"],
       expandedRows: [],
     };
   },
@@ -215,6 +207,13 @@ export default {
         averageData: averageData,
         minimumData: minimumData,
       };
+    },
+    sortedDisplayOptions() {
+      return [...this.displayOptions].sort((a, b) => {
+        if (a === this.display) return -1;
+        if (b === this.display) return 1;
+        return 0;
+      });
     },
   },
 };

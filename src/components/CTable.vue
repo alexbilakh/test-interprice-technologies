@@ -59,6 +59,7 @@ import data from "../assets/data.json";
             :expanded="expandedRows.includes(`${item.Id}_${item.Company}`)"
             @expand="onExpand(item)"
             :item="item"
+            :currency="currency"
             :years="years"
             :display="d"
             :mainDisplay="display"

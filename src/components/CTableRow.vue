@@ -65,6 +65,10 @@ export default {
       type: String,
       required: true,
     },
+    currency: {
+      type: String,
+      required: true,
+    },
     years: {
       type: Array,
       required: true,
@@ -95,6 +99,7 @@ export default {
       // make obj hash data
       const quoteObj = {};
       this.item.Quote?.forEach((qt) => {
+        if (this.currency !== qt.Currency) return;
         if (!quoteObj[qt.Years]) quoteObj[qt.Years] = {};
         quoteObj[qt.Years][qt.CouponType] = qt;
       });
